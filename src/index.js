@@ -19,7 +19,8 @@ const port = 3900;
 
 var mongoose = require('mongoose');
 //Dirección a la base de datos:
-var url = 'mongodb+srv://ADMIN:ADMIN@cluster0.iwailrw.mongodb.net/test';
+var url = "mongodb+srv://ADMIN:ADMIN@cluster0.ifbctwu.mongodb.net/test";
+
 // var url = 'mongodb+srv://ADMIN:ADMIN@cluster0.iwailrw.mongodb.net/test';
 //Configuración para evitar fallos en la conexión con mongoDB
 mongoose.Promise = global.Promise;
@@ -32,11 +33,11 @@ var product_routes = require('./routes/product');
 var recipe_routes = require('./routes/recipe');
 var cart_routes = require('./routes/cart');
 
-app.put('/cart', async (req, res) => {
-    const {id, email, cart } = req.body
-    await Cart.updateOne({_id:id}, {$set:{email, cart}})
-    res.json({ msg: "libro actualizado"})
-  })
+// app.put('/cart', async (req, res) => {
+//     const {id, email, cart } = req.body
+//     await Cart.updateOne({_id:id}, {$set:{email, cart}})
+//     res.json({ msg: "libro actualizado"})
+//   })
 
 
 
